@@ -1749,25 +1749,89 @@ qual8[["quality", "chlorides", "alcohol", "citric acid", "sulphates"]].describe(
 __and red wines close to this values:__
 
 
+
 ```python
 rqual8 = red_wine_df[red_wine_df["quality"] >= 8]
-red_wine_sample[["quality", "chlorides", "alcohol", "citric acid", "sulphates"]].describe(percentiles=[])
+rqual8[["quality", "chlorides", "alcohol", "citric acid", "sulphates"]].describe(percentiles=[])
 ```
 
 
-    ---------------------------------------------------------------------------
-
-    NameError                                 Traceback (most recent call last)
-
-    <ipython-input-44-a67a25273d09> in <module>()
-          1 rqual8 = red_wine_df[red_wine_df["quality"] >= 8]
-    ----> 2 red_wine_sample[["quality", "chlorides", "alcohol", "citric acid", "sulphates"]].describe(percentiles=[])
 
 
-    NameError: name 'red_wine_sample' is not defined
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
 
+    .dataframe thead th {
+        text-align: left;
+    }
 
-
-```python
-
-```
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>quality</th>
+      <th>chlorides</th>
+      <th>alcohol</th>
+      <th>citric acid</th>
+      <th>sulphates</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>18.0</td>
+      <td>18.000000</td>
+      <td>18.000000</td>
+      <td>18.000000</td>
+      <td>18.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>8.0</td>
+      <td>0.068444</td>
+      <td>12.094444</td>
+      <td>0.391111</td>
+      <td>0.767778</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>0.0</td>
+      <td>0.011678</td>
+      <td>1.224011</td>
+      <td>0.199526</td>
+      <td>0.115379</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>8.0</td>
+      <td>0.044000</td>
+      <td>9.800000</td>
+      <td>0.030000</td>
+      <td>0.630000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>8.0</td>
+      <td>0.070500</td>
+      <td>12.150000</td>
+      <td>0.420000</td>
+      <td>0.740000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>8.0</td>
+      <td>0.086000</td>
+      <td>14.000000</td>
+      <td>0.720000</td>
+      <td>1.100000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
