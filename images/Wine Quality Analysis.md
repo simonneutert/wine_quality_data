@@ -4,10 +4,10 @@
 https://archive.ics.uci.edu/ml/datasets/Wine+Quality
 
 Citation Request:
-  This dataset is public available for research. The details are described in [Cortez et al., 2009].
+  This dataset is public available for research. The details are described in [Cortez et al., 2009]. 
   Please include this citation if you plan to use this database:
 
-  P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis.
+  P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis. 
   Modeling wine preferences by data mining from physicochemical properties.
   In Decision Support Systems, Elsevier, 47(4):547-553. ISSN: 0167-9236.
 
@@ -15,43 +15,43 @@ Citation Request:
                 [Pre-press (pdf)] http://www3.dsi.uminho.pt/pcortez/winequality09.pdf
                 [bib] http://www3.dsi.uminho.pt/pcortez/dss09.bib
 
-1. Title: Wine Quality
+1. Title: Wine Quality 
 
 2. Sources
    Created by: Paulo Cortez (Univ. Minho), Antonio Cerdeira, Fernando Almeida, Telmo Matos and Jose Reis (CVRVV) @ 2009
-
+   
 3. Past Usage:
 
-  P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis.
+  P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis. 
   Modeling wine preferences by data mining from physicochemical properties.
   In Decision Support Systems, Elsevier, 47(4):547-553. ISSN: 0167-9236.
 
   In the above reference, two datasets were created, using red and white wine samples.
   The inputs include objective tests (e.g. PH values) and the output is based on sensory data
-  (median of at least 3 evaluations made by wine experts). Each expert graded the wine quality
+  (median of at least 3 evaluations made by wine experts). Each expert graded the wine quality 
   between 0 (very bad) and 10 (very excellent). Several data mining methods were applied to model
   these datasets under a regression approach. The support vector machine model achieved the
   best results. Several metrics were computed: MAD, confusion matrix for a fixed error tolerance (T),
   etc. Also, we plot the relative importances of the input variables (as measured by a sensitivity
   analysis procedure).
-
+ 
 4. Relevant Information:
 
    The two datasets are related to red and white variants of the Portuguese "Vinho Verde" wine.
    For more details, consult: http://www.vinhoverde.pt/en/ or the reference [Cortez et al., 2009].
-   Due to privacy and logistic issues, only physicochemical (inputs) and sensory (the output) variables
+   Due to privacy and logistic issues, only physicochemical (inputs) and sensory (the output) variables 
    are available (e.g. there is no data about grape types, wine brand, wine selling price, etc.).
 
    These datasets can be viewed as classification or regression tasks.
    The classes are ordered and not balanced (e.g. there are munch more normal wines than
    excellent or poor ones). Outlier detection algorithms could be used to detect the few excellent
    or poor wines. Also, we are not sure if all input variables are relevant. So
-   it could be interesting to test feature selection methods.
+   it could be interesting to test feature selection methods. 
 
-5. Number of Instances: red wine - 1599; white wine - 4898.
+5. Number of Instances: red wine - 1599; white wine - 4898. 
 
 6. Number of Attributes: 11 + output attribute
-
+  
    Note: several of the attributes may be correlated, thus it makes sense to apply some sort of
    feature selection.
 
@@ -71,7 +71,7 @@ Citation Request:
    9 - pH
    10 - sulphates
    11 - alcohol
-   Output variable (based on sensory data):
+   Output variable (based on sensory data): 
    12 - quality (score between 0 and 10)
 
 8. Missing Attribute Values: None
@@ -548,7 +548,7 @@ sns.plt.title("White Wines")
 
 
 
-![png](images/output_29_1.png)
+![png](output_29_1.png)
 
 
 
@@ -585,7 +585,7 @@ sns.plt.title("Red Wines")
 
 
 
-![png](images/output_31_1.png)
+![png](output_31_1.png)
 
 
 
@@ -785,7 +785,7 @@ sns.stripplot(data=white_wine_df, x="quality", y="free sulfur dioxide", jitter=T
 
 
 
-![png](images/output_49_1.png)
+![png](output_49_1.png)
 
 
 
@@ -821,7 +821,7 @@ sns.stripplot(data=red_wine_df, x="quality", y="free sulfur dioxide", jitter=Tru
 
 
 
-![png](images/output_53_1.png)
+![png](output_53_1.png)
 
 
 
@@ -857,7 +857,7 @@ sns.stripplot(data=wine_df, x="quality", y="sulphates", jitter=True, hue="color"
 
 
 
-![png](images/output_58_1.png)
+![png](output_58_1.png)
 
 
 ## Alcohol in Wine
@@ -1132,7 +1132,7 @@ sns.barplot(data=wine_df, x="quality", y="alcohol", hue="color")
 
 
 
-![png](images/output_65_1.png)
+![png](output_65_1.png)
 
 
 
@@ -1148,7 +1148,7 @@ sns.lmplot(data=wine_df, x="quality", y="alcohol", hue="color")
 
 
 
-![png](images/output_66_1.png)
+![png](output_66_1.png)
 
 
 #### Alcohol to Quality relation for Wines equal or greater than 7
@@ -1168,7 +1168,7 @@ sns.plt.title("Quality >= 7")
 
 
 
-![png](images/output_68_1.png)
+![png](output_68_1.png)
 
 
 ## Heatmap Alcohol to Quality
@@ -1189,7 +1189,7 @@ sns.heatmap(heat_table.pivot("quality", "alcohol", "counts"))
 
 
 
-![png](images/output_70_1.png)
+![png](output_70_1.png)
 
 
 # Chlorides
@@ -1207,7 +1207,7 @@ sns.barplot(data=wine_df, hue="color", x="quality", y="chlorides")
 
 
 
-![png](images/output_72_1.png)
+![png](output_72_1.png)
 
 
 __The less chlorides in a wine the higher the quality.__
@@ -1223,7 +1223,7 @@ g = g.add_legend()
 ```
 
 
-![png](images/output_75_0.png)
+![png](output_75_0.png)
 
 
 ## Acids
@@ -1241,7 +1241,7 @@ sns.pairplot(white_wine_df[["volatile acidity", "citric acid", "quality"]], hue=
 
 
 
-![png](images/output_77_1.png)
+![png](output_77_1.png)
 
 
 ## Bringing the relevant attributes together
@@ -1259,7 +1259,7 @@ sns.pairplot(white_wine_df[["volatile acidity", "citric acid", "quality", "free 
 
 
 
-![png](images/output_79_1.png)
+![png](output_79_1.png)
 
 
 
@@ -1616,7 +1616,7 @@ when comparing the best (8,9) vs. worst (3,4) we can see that they well overlap 
 
 
 ```python
-qual3 = white_wine_df[white_wine_df["quality"] == 3]
+qual3 = white_wine_df[white_wine_df["quality"] == 3] 
 qual4 = white_wine_df[white_wine_df["quality"] == 4].copy()
 qual4.quality = 3
 qual8 = white_wine_df[white_wine_df["quality"] == 8]
@@ -1635,7 +1635,7 @@ sns.pairplot(white_wine_sample[["volatile acidity", "citric acid", "quality"]], 
 
 
 
-![png](images/output_83_1.png)
+![png](output_83_1.png)
 
 
 
@@ -1651,7 +1651,7 @@ sns.pairplot(white_wine_sample[["volatile acidity", "citric acid", "quality", "s
 
 
 
-![png](images/output_84_1.png)
+![png](output_84_1.png)
 
 
 # Seems like labs can't measure a wine's inner spirit (yet).
@@ -1762,7 +1762,7 @@ red_wine_sample[["quality", "chlorides", "alcohol", "citric acid", "sulphates"]]
     <ipython-input-44-a67a25273d09> in <module>()
           1 rqual8 = red_wine_df[red_wine_df["quality"] >= 8]
     ----> 2 red_wine_sample[["quality", "chlorides", "alcohol", "citric acid", "sulphates"]].describe(percentiles=[])
-
+    
 
     NameError: name 'red_wine_sample' is not defined
 
